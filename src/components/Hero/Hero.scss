@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+@import "../../styles/colors.scss";
+
+.hero-section {
+  padding-top: 75px;
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      color: $primaryTextColor;
+      font-size: 3rem;
+      margin: 0;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      line-height: 1.125;
+    }
+    .sub-title {
+      color: $primaryTextColor;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .avatar-container {
+      height: auto;
+      width: 400px;
+      margin: 2rem auto;
+
+      img {
+        width: inherit;
+        height: inherit;
+        margin-top: -10%;
+      }
+    }
+
+    .desk-container {
+      margin: 0 auto;
+    }
+  }
+}

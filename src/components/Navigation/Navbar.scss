@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+@import "../../styles/colors.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5rem;
+  padding: 1.2rem 0;
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
+
+  .logo-container {
+    height: 5rem;
+    width: auto;
+    cursor: pointer;
+
+    img {
+      height: inherit;
+      width: inherit;
+    }
+  }
+
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    @media (max-width: $breakpoint-mobile) {
+      justify-content: center;
+    }
+
+    a {
+      margin: 2rem;
+      text-decoration: none;
+      padding: 1rem;
+      color: $primaryTextColor;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+    a:last-child {
+      color: $primaryColor;
+      border: 2px solid $primaryColor;
+      border-radius: 1.5rem;
+      &:hover {
+        background-color: $primaryColor;
+        color: $secondaryTextColor;
+      }
+    }
+  }
+}
