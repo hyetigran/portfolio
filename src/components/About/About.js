@@ -1,14 +1,13 @@
 import React from "react";
-import "./components.css";
+import "./About.scss";
 
-const about = () => {
+const About = () => {
   return (
     <section className="about">
-      <div className="hero-container">
+      <div className="about-container">
         <h1>Hi, my friends call me Tig. Nice to meet you.</h1>
         <h2></h2>
         <div></div>
-
         <h3>
           Since graduating with a degree in finance, the three questions I
           repeatedly ask myself -- Who are you? Where are you going? & Why? --
@@ -21,4 +20,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

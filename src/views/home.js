@@ -1,21 +1,19 @@
 import React from "react";
-import "../App.css";
 
-import Hero from "../components/hero";
-import About from "../components/about";
-import Projects from "../components/projects";
+import Hero from "../components/Hero/Hero";
+import About from "../components/About/About";
+import Projects from "../components/Projects/Projects";
+import Contact from "../components/Contact/Contact";
 
-const home = () => {
+const Home = () => {
   return (
     <section className="home">
       <Hero />
       <About />
       <Projects />
+      <Contact />
     </section>
-    <div>
-    </div>
   );
 };
 
-
-export default home;
+export default Home;
