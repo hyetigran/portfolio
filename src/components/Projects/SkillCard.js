@@ -1,16 +1,28 @@
 import React from "react";
 
+import "./Projects.scss";
+
 const SkillCard = props => {
-  const { icon, title, tagline, tech, tools } = props.skill;
+  const {
+    icon,
+    title,
+    tagline,
+    techOne,
+    techTwo,
+    toolsOne,
+    toolsTwo
+  } = props.skill;
   return (
-    <div>
-      <img src="" alt={icon} />
-      <p>{title}</p>
-      <p>{tagline}</p>
-      <p>Tech Stack:</p>
-      <p>{tech}</p>
-      <p>Tools</p>
-      <p>{tools}</p>
+    <div className="skillCard">
+      {icon}
+      <p className="title">{title}</p>
+      <p className="tagline">{tagline}</p>
+      <p className="title">Tech Stack:</p>
+      <p>{techOne}</p>
+      <p>{techTwo}</p>
+      <p className="title">Tools:</p>
+      <p>{toolsOne}</p>
+      <p>{toolsTwo}</p>
     </div>
   );
 };

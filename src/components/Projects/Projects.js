@@ -2,10 +2,29 @@ import React from "react";
 
 import SkillCard from "./SkillCard";
 import ProjectCard from "./ProjectCard";
+import "./Projects.scss";
 
 const cardInfo = [
-  { icon: "test", title: "test", tagline: "test", tech: "test", tools: "test" },
-  { icon: "t", title: "t", tagline: "t", tech: "t", tools: "t" }
+  {
+    icon: <i class="fas fa-code fa-5x"></i>,
+    title: "Front-End Developer",
+    tagline:
+      "I like using React for client-side development in order to bring ideas to life in the browser.",
+    techOne: "React | Firebase | Reactstrap",
+    techTwo: "Redux | Styled Components | Antd",
+    toolsOne: "VS Code | Axios | GitHub",
+    toolsTwo: "Lodash | Babel | Webpack"
+  },
+  {
+    icon: <i class="fas fa-server fa-5x"></i>,
+    title: "Back-End Developer",
+    tagline:
+      "For server-side development, I'm comfortable with both node/express and the django ecosystem",
+    techOne: "Node | Express | GraphQL | Django",
+    techTwo: "PostgreSQL | MongoDB | Sqlite",
+    toolsOne: "JWT | Jest | Moment",
+    toolsTwo: "Knex | Bcrypt | Cors "
+  }
 ];
 
 const projectInfo = [
