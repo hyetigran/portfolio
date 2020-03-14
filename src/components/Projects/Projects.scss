@@ -1,37 +1,48 @@
 @import "../../styles/variables.scss";
 @import "../../styles/colors.scss";
 
-.skillContainer {
-  display: flex;
-  justify-content: space-around;
+.projects {
+  .skill-container {
+    display: flex;
+    justify-content: space-around;
 
-  margin-top: -10rem;
+    margin-top: -10rem;
 
-  .skillCard {
-    background-color: $secondaryTextColor;
-    border: 1px solid $borderColor;
-    border-radius: 1rem;
-    padding: 2.5rem;
-    min-width: 30%;
-    max-width: 30%;
-    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px$borderColor;
+    .skill-card {
+      background-color: $secondaryTextColor;
+      border: 1px solid $borderColor;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      min-width: 30%;
+      max-width: 30%;
+      box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px$borderColor;
 
-    i {
-      color: $primaryColor;
+      i {
+        color: $primaryColor;
+      }
+
+      .title {
+        color: $primaryColor;
+        font-size: 1.75rem;
+        font-weight: bold;
+        padding-top: 1rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+      .tagline {
+        line-height: 1.5;
+      }
     }
-
-    .title {
-      color: $primaryColor;
-      font-size: 1.75rem;
-      font-weight: bold;
-      padding-top: 1rem;
-    }
-
-    p {
-      font-size: 1.25rem;
-    }
-    .tagline {
-      line-height: 1.5;
-    }
+  }
+  .projects-title {
+    margin-top: 5rem;
+    color: $primaryTextColor;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.25rem;
   }
 }

@@ -13,7 +13,7 @@ const SkillCard = props => {
     toolsTwo
   } = props.skill;
   return (
-    <div className="skillCard">
+    <div className="skill-card">
       {icon}
       <p className="title">{title}</p>
       <p className="tagline">{tagline}</p>

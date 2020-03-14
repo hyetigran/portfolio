@@ -58,13 +58,14 @@ const projectInfo = [
 const Projects = () => {
   return (
     <section className="projects">
-      <div className="skillContainer">
+      <div className="skill-container">
         {cardInfo.map(skill => (
           <SkillCard skill={skill} />
         ))}
       </div>
       <div>
-        <h1>My Recent Projects</h1>
+        <h1 className="projects-title">My Recent Projects</h1>
+        <p>Here are just a few projects I've recently worked on. </p>
         {projectInfo.map(project => (
           <ProjectCard project={project} />
         ))}
