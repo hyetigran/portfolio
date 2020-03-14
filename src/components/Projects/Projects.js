@@ -3,6 +3,7 @@ import React from "react";
 import SkillCard from "./SkillCard";
 import ProjectCard from "./ProjectCard";
 import "./Projects.scss";
+import befitImg from "../../assets/projects/befit.png";
 
 const cardInfo = [
   {
@@ -22,37 +23,34 @@ const cardInfo = [
       "For server-side development, I'm comfortable with both node/express and the django ecosystem",
     techOne: "Node | Express | GraphQL | Django",
     techTwo: "PostgreSQL | MongoDB | Sqlite",
-    toolsOne: "JWT | Jest | Moment",
+    toolsOne: "JWT | Jest | Postman",
     toolsTwo: "Knex | Bcrypt | Cors "
   }
 ];
 
 const projectInfo = [
   {
-    image: "src/assets/projects/befit.png",
-    title: "beFit",
-    tech: "",
+    image: befitImg,
+    title: "BeFit",
     description:
       "An all-in-one fitness tracker that let's you build your own custom workouts, exercise on the fly and monitor your progress.",
     liveLink: "https://theworkouttracker.netlify.com/",
     repoLink: "https://github.com/labseu2-workout-tracker"
-  },
-  {
-    image: "",
-    title: "",
-    tech: "",
-    description: "",
-    liveLink: "",
-    repoLink: ""
-  },
-  {
-    image: "",
-    title: "",
-    tech: "",
-    description: "",
-    liveLink: "",
-    repoLink: ""
   }
+  // {
+  //   image: "",
+  //   title: "",
+  //   description: "",
+  //   liveLink: "",
+  //   repoLink: ""
+  // },
+  // {
+  //   image: "",
+  //   title: "",
+  //   description: "",
+  //   liveLink: "",
+  //   repoLink: ""
+  // }
 ];
 
 const Projects = () => {
@@ -66,9 +64,12 @@ const Projects = () => {
       <div>
         <h1 className="projects-title">My Recent Projects</h1>
         <p>Here are just a few projects I've recently worked on. </p>
-        {projectInfo.map(project => (
-          <ProjectCard project={project} />
-        ))}
+
+        <div className="project-container">
+          {projectInfo.map(project => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
       </div>
     </section>
   );
