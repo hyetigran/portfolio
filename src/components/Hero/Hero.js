@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.scss";
-import avatar from "../../assets/avatar.jpg";
+import avatar from "../../assets/avatar2.png";
 import { ReactComponent as DeskSVG } from "../../assets/desk.svg";
 
 const Hero = () => {
