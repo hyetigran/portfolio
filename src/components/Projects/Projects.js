@@ -4,6 +4,8 @@ import SkillCard from "./SkillCard";
 import ProjectCard from "./ProjectCard";
 import "./Projects.scss";
 import befitImg from "../../assets/projects/befit.png";
+import lbtcImg from "../../assets/projects/localbtclogo.png";
+import mapRateImg from "../../assets/projects/moneymap.png";
 
 const cardInfo = [
   {
@@ -36,21 +38,23 @@ const projectInfo = [
       "An all-in-one fitness tracker that let's you build your own custom workouts, exercise on the fly and monitor your progress.",
     liveLink: "https://theworkouttracker.netlify.com/",
     repoLink: "https://github.com/labseu2-workout-tracker"
+  },
+  {
+    image: lbtcImg,
+    title: "Local Bitcoin Clone",
+    description:
+      "Inspired by local.bitcoin.com, I embarked to recreate the core features of what truly makes p2p exchanges fast and easy.",
+    liveLink: "",
+    repoLink: "https://github.com/hyetigran/local-bitcoins"
+  },
+  {
+    image: mapRateImg,
+    title: "MapRates",
+    description:
+      "A simple application to find the best rate in Armenia and map exchange locations on a map. Data is scraped daily from Rate.am.",
+    liveLink: "https://map-rate.herokuapp.com/",
+    repoLink: "https://github.com/hyetigran/map-rate"
   }
-  // {
-  //   image: "",
-  //   title: "",
-  //   description: "",
-  //   liveLink: "",
-  //   repoLink: ""
-  // },
-  // {
-  //   image: "",
-  //   title: "",
-  //   description: "",
-  //   liveLink: "",
-  //   repoLink: ""
-  // }
 ];
 
 const Projects = () => {
