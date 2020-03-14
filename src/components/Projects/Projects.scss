@@ -57,6 +57,7 @@
       min-height: 20rem;
       max-height: 20rem;
       border-radius: 1rem;
+
       border: 1px solid $borderColor;
       box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px$borderColor;
       position: relative;
@@ -79,6 +80,7 @@
         margin-top: 5%;
         width: 100%;
         height: auto;
+        padding: 10%;
       }
 
       .lbtc {
