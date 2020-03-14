@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-
 import { ReactComponent as MailSVG } from "../../assets/mailBox.svg";
+
+import "./Contact.scss";
+
 let initialState = {
   myEmail: "tigran.asriyan@gmail.com",
   _replyto: "",
@@ -28,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <section clasName="contact-container">
+    <section className="contact-container">
       <div className="contact-left">
         <h1>Thanks for taking the time to reach out.</h1>
         <h1> How can I help you today?</h1>

@@ -1,0 +1,11 @@
+.contact-container {
+  display: flex;
+  margin-top: 15%;
+
+  .contact-left {
+    max-width: 45%;
+  }
+  .contact-right {
+    max-width: 45%;
+  }
+}
