@@ -1,10 +1,15 @@
 import React from "react";
 
 const ProjectCard = props => {
-  const { image, title, tech, description, liveLink, repoLink } = props.project;
+  const { image, title, description, liveLink, repoLink } = props.project;
+
+  let extraStyle = "";
+  if (title === "Local Bitcoin Clone") {
+    extraStyle = "lbtc";
+  }
   return (
     <figure className="project-card">
-      <img src={image} alt={`${title} logo`} />
+      <img className={extraStyle} src={image} alt={`${title} logo`} />
       <figcaption>
         <h1>{title}</h1>
         <p>{description}</p>

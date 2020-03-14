@@ -4,8 +4,8 @@ import SkillCard from "./SkillCard";
 import ProjectCard from "./ProjectCard";
 import "./Projects.scss";
 import befitImg from "../../assets/projects/befit.png";
-import lbtcImg from "../../assets/projects/localbtclogo.png";
-import mapRateImg from "../../assets/projects/moneymap.png";
+import lbtcImg from "../../assets/projects/lbtc.png";
+import mapRateImg from "../../assets/projects/coins.png";
 
 const cardInfo = [
   {
@@ -24,9 +24,9 @@ const cardInfo = [
     tagline:
       "For server-side development, I'm comfortable with both node/express and the django ecosystem",
     techOne: "Node | Express | GraphQL | Django",
-    techTwo: "PostgreSQL | MongoDB | Sqlite",
+    techTwo: "PostgreSQL | MongoDB | Knex",
     toolsOne: "JWT | Jest | Postman",
-    toolsTwo: "Knex | Bcrypt | Cors "
+    toolsTwo: "Heroku | Bcrypt | Cors "
   }
 ];
 

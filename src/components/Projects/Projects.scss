@@ -47,11 +47,15 @@
   }
   .project-container {
     display: flex;
+    justify-content: space-around;
+    overflow-x: hidden;
+    margin: 0 2.5%;
 
     .project-card {
-      min-width: 30%;
+      min-width: 25%;
       max-width: 30%;
       min-height: 20rem;
+      max-height: 20rem;
       border-radius: 1rem;
       border: 1px solid $borderColor;
       box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px$borderColor;
@@ -72,7 +76,15 @@
       img {
         transform: scale(1);
         transition: 0.25s ease-in-out;
-        margin-top: 15%;
+        margin-top: 5%;
+        width: 100%;
+        height: auto;
+      }
+
+      .lbtc {
+        height: 100%;
+        width: auto;
+        margin: 0;
       }
       figcaption {
         display: flex;
@@ -135,7 +147,7 @@
           border-radius: 1.5rem;
           font-size: 1.25rem;
           font-weight: bold;
-          width: 50%;
+          width: 70%;
           margin: 0 auto;
           margin-bottom: 1rem;
           padding: 0.5rem;
