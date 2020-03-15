@@ -1,0 +1,52 @@
+@import "../../styles/variables.scss";
+@import "../../styles/colors.scss";
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $primaryColor;
+  position: relative;
+  color: $secondaryTextColor;
+  padding-bottom: 2.5%;
+
+  .link-top {
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 5%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 25% 50% 25% 50%;
+
+    i {
+      color: $secondaryTextColor;
+      font-size: 4rem;
+    }
+    &:hover {
+      background-color: $primaryTextColor;
+    }
+  }
+  .sign-off {
+    font-size: 2rem;
+    width: 30%;
+    margin: 5% auto;
+  }
+
+  .social-media-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 2rem auto;
+    min-width: 25%;
+
+    i {
+      border-radius: 0.3rem;
+      color: $primaryTextColor;
+      font-size: 3rem;
+      width: 110%;
+      height: auto;
+
+      &:hover {
+        background-color: $secondaryTextColor;
+      }
+    }
+  }
+}
