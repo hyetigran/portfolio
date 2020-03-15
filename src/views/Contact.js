@@ -12,7 +12,6 @@ let initialState = {
 };
 const Contact = () => {
   const [form, setForm] = useState(initialState);
-  console.log(form);
   const handleChange = async e => {
     e.preventDefault();
     const { _replyto, subject, message } = form;

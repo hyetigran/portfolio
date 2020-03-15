@@ -59,6 +59,7 @@
     .name-email-input {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 5%;
       label {
         width: 45%;
       }
@@ -67,13 +68,16 @@
     .submit-button {
       display: flex;
       button {
-        margin: 10% auto;
+        margin: 8% auto;
         padding: 2% 5%;
-        font-size: 2.5rem;
-        border-radius: 0.5rem;
+        width: 40%;
+        min-width: 220px;
+        font-size: 3rem;
+        border-radius: 1.5rem;
         border: 2px solid $primaryColor;
         color: $primaryColor;
         cursor: pointer;
+        white-space: nowrap;
 
         &:hover {
           background-color: $primaryColor;

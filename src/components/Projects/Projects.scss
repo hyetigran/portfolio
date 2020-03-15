@@ -47,17 +47,19 @@
   }
   .project-container {
     display: flex;
+    flex-flow: wrap;
     justify-content: space-around;
     overflow-x: hidden;
-    margin: 0 2.5%;
+    margin: 0 auto;
+    max-width: 1300px;
 
     .project-card {
-      min-width: 25%;
+      min-width: 300px;
       max-width: 30%;
       min-height: 20rem;
       max-height: 20rem;
       border-radius: 1rem;
-
+      margin-bottom: 5%;
       border: 1px solid $borderColor;
       box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px$borderColor;
       position: relative;

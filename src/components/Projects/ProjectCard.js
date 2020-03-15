@@ -17,7 +17,7 @@ const ProjectCard = props => {
           View Project
         </a>
         <a href={repoLink} className="code-link" target="_blank">
-          <i class="fab fa-github"></i> View Code
+          <i className="fab fa-github"></i> View Code
         </a>
       </figcaption>
       <div className="overlay"></div>
