@@ -66,7 +66,9 @@ const Projects = () => {
         ))}
       </div>
       <div>
-        <h1 className="projects-title">My Recent Projects</h1>
+        <h1 className="projects-title" id="projects">
+          My Recent Projects
+        </h1>
         <p>Here are just a few projects I've recently worked on. </p>
 
         <div className="project-container">

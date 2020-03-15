@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+@import "../../styles/colors.scss";
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: -8%;
+  border-radius: 1rem;
+  width: 90%;
+  background-color: $primaryTextColor;
+  color: $secondaryTextColor;
+  padding: 3.5rem 1rem;
+
+  div {
+    margin: auto;
+    font-size: 2rem;
+    font-weight: bold;
+
+    p {
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+  }
+  a {
+    margin: 2rem;
+    text-decoration: none;
+    padding: 1rem;
+    color: $secondaryTextColor;
+    font-weight: bold;
+    cursor: pointer;
+
+    border: 2px solid $primaryColor;
+    border-radius: 1.5rem;
+    &:hover {
+      background-color: $primaryColor;
+      color: $secondaryTextColor;
+    }
+  }
+}
