@@ -10,17 +10,31 @@ import Contact from "./views/Contact";
 function App() {
   return (
     <Switch>
-      <Route exact path="/">
-        <div className="App" id="home">
-          <Navbar />
-          <Home />
-          <Footer />
-        </div>
-      </Route>
-      <Route path="/contact">
-        <Navbar />
-        <Contact />
-      </Route>
+      <Route
+        exact
+        path="/"
+        render={props => {
+          return (
+            <div className="App" id="home">
+              <Navbar {...props} />
+              <Home />
+              <Footer />
+            </div>
+          );
+        }}
+      />
+      ;
+      <Route
+        path="/contact"
+        render={props => {
+          return (
+            <>
+              <Navbar {...props} />
+              <Contact />
+            </>
+          );
+        }}
+      />
     </Switch>
   );
 }

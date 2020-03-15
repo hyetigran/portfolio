@@ -9,7 +9,7 @@ import mapRateImg from "../../assets/projects/coins.png";
 
 const cardInfo = [
   {
-    icon: <i class="fas fa-code fa-5x"></i>,
+    icon: <i className="fas fa-code fa-5x"></i>,
     title: "Front-End Developer",
     tagline:
       "I like using React for client-side development in order to bring ideas to life in the browser.",
@@ -19,7 +19,7 @@ const cardInfo = [
     toolsTwo: "Lodash | Babel | Webpack"
   },
   {
-    icon: <i class="fas fa-server fa-5x"></i>,
+    icon: <i className="fas fa-server fa-5x"></i>,
     title: "Back-End Developer",
     tagline:
       "For server-side development, I'm comfortable with both node/express and the django ecosystem",
@@ -62,7 +62,7 @@ const Projects = () => {
     <section className="projects">
       <div className="skill-container">
         {cardInfo.map(skill => (
-          <SkillCard skill={skill} />
+          <SkillCard key={skill.title} skill={skill} />
         ))}
       </div>
       <div>
@@ -73,7 +73,7 @@ const Projects = () => {
 
         <div className="project-container">
           {projectInfo.map(project => (
-            <ProjectCard project={project} />
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
       </div>

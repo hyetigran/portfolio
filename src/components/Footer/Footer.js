@@ -9,7 +9,7 @@ const Footer = () => {
       <Contact />
       <div className="link-top">
         <a href="#home">
-          <i class="fas fa-arrow-circle-up"></i>
+          <i className="fas fa-arrow-circle-up"></i>
         </a>
       </div>
       <p className="sign-off">
@@ -21,36 +21,28 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fab fa-github-square"></i>
+          <i className="fab fa-github-square"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/tigranasriyan/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fab fa-linkedin"></i>
+          <i className="fab fa-linkedin"></i>
         </a>
         <a
           href="https://twitter.com/hyetigran"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fab fa-twitter-square"></i>
+          <i className="fab fa-twitter-square"></i>
         </a>
       </div>
       <div>
-        Handcrafted with <i class="fas fa-coffee" /> by Tig
+        Handcrafted with <i className="fas fa-coffee" /> by Tig
       </div>
     </section>
   );
 };
 
 export default Footer;
-
-{
-  /* 
-<i class="fab fa-twitter-square"></i>
-
-<i class="fab fa-linkedin"></i>
-*/
-}
