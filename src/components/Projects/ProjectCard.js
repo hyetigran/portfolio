@@ -12,7 +12,7 @@ const ProjectCard = props => {
       <img className={extraStyle} src={image} alt={`${title} logo`} />
       <figcaption>
         <h1>{title}</h1>
-        <p>{description}</p>
+        <p className="truncate-overflow">{description}</p>
         <a href={liveLink} className="view-project" target="_blank">
           View Project
         </a>
