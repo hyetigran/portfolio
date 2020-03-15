@@ -46,11 +46,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-{
-  /* 
-<i class="fab fa-twitter-square"></i>
-
-<i class="fab fa-linkedin"></i>
-*/
-}

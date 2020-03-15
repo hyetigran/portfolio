@@ -3,12 +3,83 @@
 
 .contact-section {
   display: flex;
-  margin-top: 15%;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
 
-  .contact-left {
-    max-width: 45%;
+  .contact-top {
+    display: flex;
+    flex-direction: column;
+
+    .avatar-container {
+      width: 150px;
+      margin: -10% auto 0 auto;
+
+      img {
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    h1 {
+      color: $primaryTextColor;
+      margin: 1% auto 0 auto;
+      font-size: 2rem;
+    }
   }
-  .contact-right {
-    max-width: 45%;
+
+  .contact-bottom {
+    display: flex;
+    margin: 5% auto;
+    width: 60%;
+    max-width: 60%;
+    form {
+      width: 100%;
+      color: $formText;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+    }
+    input {
+      height: 2.5rem;
+      line-height: 1.5rem;
+      font-size: 1.5rem;
+      padding: 2%;
+      border: 2px solid rgb(238, 238, 238);
+    }
+    textarea {
+      resize: vertical;
+      border: 2px solid rgb(238, 238, 238);
+      line-height: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .name-email-input {
+      display: flex;
+      justify-content: space-between;
+      label {
+        width: 45%;
+      }
+    }
+
+    .submit-button {
+      display: flex;
+      button {
+        margin: 10% auto;
+        padding: 2% 5%;
+        font-size: 2.5rem;
+        border-radius: 0.5rem;
+        border: 2px solid $primaryColor;
+        color: $primaryColor;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $primaryColor;
+          color: $secondaryTextColor;
+        }
+      }
+    }
   }
 }
