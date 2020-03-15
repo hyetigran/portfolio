@@ -5,7 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navigation/Navbar";
 import Home from "./views/Home";
 import Footer from "./components/Footer/Footer";
-import Contact from "./components/Contact/Contact";
+import Contact from "./views/Contact";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         </div>
       </Route>
       <Route path="/contact">
+        <Navbar />
         <Contact />
       </Route>
     </Switch>
