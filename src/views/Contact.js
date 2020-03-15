@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ReactComponent as MailSVG } from "../assets/mailBox.svg";
 import avatar from "../assets/avatar2.png";
 
 import "./Contact.scss";
@@ -33,8 +32,6 @@ const Contact = () => {
           <img src={avatar} alt="avatar" />
         </div>
         <h1>Thanks for taking the time to reach out.</h1>
-        <h1> How can I help you today?</h1>
-        {/* <MailSVG /> */}
       </div>
 
       <div className="contact-bottom">
