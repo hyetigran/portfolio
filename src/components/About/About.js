@@ -9,11 +9,11 @@ const About = () => {
           Hi, my friends call me Tig. Nice to meet you.
         </h1>
         <h2 className="about-text">
-          Since graduating with a degree in finance, the three questions I
-          repeatedly ask myself -- Who are you? Where are you going? & Why? --
-          helped guide me to realize my goal of building great products instead
-          of simply consuming them. After a year of honing my skills, I'm
-          determined and ready to help you build great products together.
+          Since graduating with a degree in finance and working for a big four
+          firm, I discovered that I was more interested in creating than
+          consulting. Lambda School has given me the essential tools of the web
+          and after a year of honing my skills, I'm determined to help you build
+          great products together.
         </h2>
       </div>
     </section>
