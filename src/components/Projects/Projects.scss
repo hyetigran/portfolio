@@ -8,15 +8,23 @@
 
     margin-top: -10rem;
 
+    @media only screen and (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+    }
     .skill-card {
       background-color: $secondaryTextColor;
       border: 1px solid $borderColor;
       border-radius: 1rem;
       padding: 2.5rem;
-      min-width: 30%;
-      max-width: 40%;
+      min-width: 300px;
+      max-width: 400px;
       box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px$borderColor;
 
+      @media only screen and (max-width: $breakpoint-tablet) {
+        margin: 0 auto;
+        margin-bottom: 5%;
+        width: 90%;
+      }
       i {
         color: $primaryColor;
       }
