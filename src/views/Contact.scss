@@ -10,6 +10,7 @@
   .contact-top {
     display: flex;
     flex-direction: column;
+    text-align: center;
 
     .avatar-container {
       width: 150px;
@@ -33,6 +34,10 @@
     margin: 5% auto;
     width: 60%;
     max-width: 60%;
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 90%;
+      max-width: 90%;
+    }
     form {
       width: 100%;
       color: $formText;
@@ -60,8 +65,14 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 5%;
+      @media only screen and (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+      }
       label {
         width: 45%;
+        @media only screen and (max-width: $breakpoint-tablet) {
+          width: 100%;
+        }
       }
     }
 

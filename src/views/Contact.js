@@ -8,11 +8,11 @@ let initialState = {
   _replyto: "",
   subject: "",
   message: "",
-  blocked: true
+  blocked: true,
 };
 const Contact = () => {
   const [form, setForm] = useState(initialState);
-  const handleChange = async e => {
+  const handleChange = async (e) => {
     e.preventDefault();
     const { _replyto, subject, message } = form;
     const { name, value } = e.target;
@@ -30,7 +30,7 @@ const Contact = () => {
         <div className="avatar-container">
           <img src={avatar} alt="avatar" />
         </div>
-        <h1>Thanks for taking the time to reach out.</h1>
+        <h1>Thanks for taking the time to reach out</h1>
       </div>
 
       <div className="contact-bottom">
@@ -42,7 +42,7 @@ const Contact = () => {
                 type="text"
                 name="subject"
                 value={form.subject}
-                onChange={e => handleChange(e)}
+                onChange={(e) => handleChange(e)}
               />
             </label>
             <label>
@@ -51,7 +51,7 @@ const Contact = () => {
                 type="email"
                 name="_replyto"
                 value={form._replyto}
-                onChange={e => handleChange(e)}
+                onChange={(e) => handleChange(e)}
               />
             </label>
           </div>
@@ -61,7 +61,7 @@ const Contact = () => {
               type="textarea"
               name="message"
               value={form.message}
-              onChange={e => handleChange(e)}
+              onChange={(e) => handleChange(e)}
               rows="6"
             />
           </label>
