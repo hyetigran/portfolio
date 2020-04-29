@@ -77,7 +77,7 @@ const Contact = () => {
       data: form,
     })
       .then((r) => {
-        handleServerResponse(true, "Thanks!");
+        handleServerResponse(true, "Form was successfully submitted. Thanks!");
       })
       .catch((r) => {
         handleServerResponse(false, r.response.data.error);
@@ -146,7 +146,7 @@ const Contact = () => {
             </button>
           </div>
           {serverState.status && (
-            <p className={!serverState.status.ok ? "errorMsg" : ""}>
+            <p className={!serverState.status.ok ? "errorMsg" : "successMsg"}>
               {serverState.status.msg}
             </p>
           )}
@@ -157,4 +157,3 @@ const Contact = () => {
 };
 
 export default Contact;
-//action="https://formspree.io/maybqkvq" method="POST"
