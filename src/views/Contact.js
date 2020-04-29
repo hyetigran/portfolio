@@ -70,7 +70,10 @@ const Contact = () => {
           <input type="hidden" name="_subject" value={form.subject} />
           <input type="text" name="_gotcha" style={{ display: "none" }} />
           <div className="submit-button">
-            <button className={form.blocked ? `disabled-btn` : ""}>
+            <button
+              className={form.blocked ? `disabled-btn` : ""}
+              disabled={form.blocked}
+            >
               Send{" "}
               {form.blocked ? (
                 <i className="fas fa-lock"></i>
