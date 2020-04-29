@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import avatar from "../assets/avatar2.png";
+import axios from "axios";
 
 import "./Contact.scss";
 
 let initialState = {
-  myEmail: "tigran.asriyan@gmail.com",
+  myEmail: "tigran.dev@protonmail.com",
   _replyto: "",
   subject: "",
   message: "",
@@ -12,6 +13,10 @@ let initialState = {
 };
 const Contact = () => {
   const [form, setForm] = useState(initialState);
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null,
+  });
   const handleChange = async (e) => {
     e.preventDefault();
     const { _replyto, subject, message } = form;
@@ -24,6 +29,36 @@ const Contact = () => {
     }
   };
 
+  const handleServerResponse = (ok, msg) => {
+    setServerState({
+      submitting: false,
+      status: { ok, msg },
+    });
+    if (ok) {
+      setForm({
+        _replyto: "",
+        message: "",
+        subject: "",
+      });
+    }
+  };
+
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    setServerState({ submitting: true });
+    axios({
+      method: "POST",
+      url: `https://formspree.io/maybqkvq`,
+      data: form,
+    })
+      .then((r) => {
+        handleServerResponse(true, "Thanks!");
+      })
+      .catch((r) => {
+        handleServerResponse(false, r.response.data.error);
+      });
+  };
+
   return (
     <section className="contact-section">
       <div className="contact-top">
@@ -34,7 +69,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-bottom">
-        <form action="https://formspree.io/maybqkvq" method="POST">
+        <form onSubmit={handleOnSubmit}>
           <div className="name-email-input">
             <label>
               Name
@@ -66,7 +101,7 @@ const Contact = () => {
             />
           </label>
 
-          <input type="hidden" name="_next" value="https://tigran.software/" />
+          <input type="hidden" name="_next" value="https://atigran.com/" />
           <input type="hidden" name="_subject" value={form.subject} />
           <input type="text" name="_gotcha" style={{ display: "none" }} />
           <div className="submit-button">
@@ -82,6 +117,11 @@ const Contact = () => {
               )}
             </button>
           </div>
+          {serverState.status && (
+            <p className={!serverState.status.ok ? "errorMsg" : ""}>
+              {serverState.status.msg}
+            </p>
+          )}
         </form>
       </div>
     </section>
@@ -89,3 +129,4 @@ const Contact = () => {
 };
 
 export default Contact;
+//action="https://formspree.io/maybqkvq" method="POST"
