@@ -3,6 +3,7 @@ import { person, available } from "@/data/resume";
 import { links } from "@/data/links";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/project-card";
+import { HeroField } from "@/components/hero-field";
 
 const specRow = "flex justify-between py-2.5 border-b border-white/6";
 
@@ -11,8 +12,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="grid grid-cols-1 lg:grid-cols-[1fr_380px] border-b border-white/8">
-        <div className="px-6 sm:px-10 py-14 sm:py-16 lg:border-r border-white/8">
+      <section className="relative overflow-hidden grid grid-cols-1 lg:grid-cols-[1fr_380px] border-b border-white/8">
+        <HeroField />
+        <div className="relative z-[1] px-6 sm:px-10 py-14 sm:py-16 lg:border-r border-white/8">
           <div className="font-mono text-[11.5px] tracking-[0.14em] uppercase text-ink-faint mb-6">
             {person.role} · {person.location}
           </div>
@@ -46,7 +48,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="px-8 py-9 font-mono text-[12.5px]">
+        <div className="relative z-[1] px-8 py-9 font-mono text-[12.5px] bg-surface/72 backdrop-blur-[2px]">
           <div className="text-[11px] tracking-[0.14em] uppercase text-ink-faint mb-5">
             spec
           </div>

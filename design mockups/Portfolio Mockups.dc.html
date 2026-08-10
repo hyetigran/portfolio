@@ -28,8 +28,9 @@
 </div>
 </div>
 
-<div style="display:grid;grid-template-columns:1fr 380px;gap:0;border-bottom:1px solid rgba(255,255,255,.08)">
-<div style="padding:72px 40px 64px;border-right:1px solid rgba(255,255,255,.08)">
+<div style="display:grid;grid-template-columns:1fr 380px;gap:0;border-bottom:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden">
+<canvas ref="{{ heroCanvasRef }}" style="position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;pointer-events:none;mask-image:radial-gradient(115% 150% at 78% 26%,#000 0%,rgba(0,0,0,.55) 42%,transparent 74%);-webkit-mask-image:radial-gradient(115% 150% at 78% 26%,#000 0%,rgba(0,0,0,.55) 42%,transparent 74%)"></canvas>
+<div style="padding:72px 40px 64px;border-right:1px solid rgba(255,255,255,.08);position:relative;z-index:1">
 <div style="font:400 11.5px/1 'JetBrains Mono',ui-monospace,monospace;color:#6b7370;letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px">Full stack developer · Austin, TX</div>
 <h1 style="margin:0;font:300 58px/1.08 'JetBrains Mono',ui-monospace,monospace;letter-spacing:-.03em;color:#f2f0ed;max-width:15ch;text-wrap:pretty">I build software<br>that holds up<br>in production<span style="color:{{ accent }};display:inline-block;width:.55em;animation:blink 1.1s step-end infinite">_</span></h1>
 <p style="margin:30px 0 0;max-width:56ch;font:300 16.5px/1.65 'IBM Plex Sans',system-ui,sans-serif;color:#a8ada9;text-wrap:pretty">Full stack developer with five years across web and mobile — TypeScript end to end, from React and React Native interfaces down to the Node and Postgres services behind them. I care about correctness, fast page loads, and owning features from requirements through release.</p>
@@ -38,7 +39,7 @@
 <span style="display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border:1px solid rgba(255,255,255,.16);color:#e8e6e3;font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;cursor:pointer" style-hover="border-color:rgba(255,255,255,.4)">download resume</span>
 </div>
 </div>
-<div style="padding:36px 32px;display:flex;flex-direction:column;gap:0;font:400 12.5px/1 'JetBrains Mono',ui-monospace,monospace">
+<div style="padding:36px 32px;display:flex;flex-direction:column;gap:0;font:400 12.5px/1 'JetBrains Mono',ui-monospace,monospace;position:relative;z-index:1;background:rgba(12,13,14,.72);backdrop-filter:blur(2px)">
 <div style="color:#6b7370;letter-spacing:.14em;text-transform:uppercase;font-size:11px;margin-bottom:20px">spec</div>
 <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#6b7370">experience</span><span>5 yrs</span></div>
 <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="color:#6b7370">focus</span><span>web · mobile</span></div>
@@ -368,13 +369,137 @@
 <p class="dv-next">Try next: "build the project case-study detail page" · "make <a class="dv-oid" href="#1a">1a</a>'s hero more restrained" · "show a light-mode variant"</p>
 </section>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;oklch(0.82 0.17 152)&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;oklch(0.82 0.17 152)&quot;,&quot;oklch(0.82 0.17 75)&quot;,&quot;oklch(0.78 0.15 250)&quot;,&quot;oklch(0.75 0.19 25)&quot;],&quot;section&quot;:&quot;Theme&quot;},&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showMetrics&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;oklch(0.82 0.17 152)&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;oklch(0.82 0.17 152)&quot;,&quot;oklch(0.82 0.17 75)&quot;,&quot;oklch(0.78 0.15 250)&quot;,&quot;oklch(0.75 0.19 25)&quot;],&quot;section&quot;:&quot;Theme&quot;},&quot;heroAnimation&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero motion&quot;},&quot;fieldDensity&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:15,&quot;min&quot;:8,&quot;max&quot;:28,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero motion&quot;},&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showMetrics&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
 class Component extends DCLogic {
+  heroCanvasRef = React.createRef();
+
+  componentDidMount() { this.startField(); }
+  componentDidUpdate() { this.stopField(); this.startField(); }
+  componentWillUnmount() { this.stopField(); }
+
+  stopField() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._ro) this._ro.disconnect();
+    if (this._offMove) this._offMove();
+    this._raf = this._ro = this._offMove = null;
+  }
+
+  // Animated interference topography: moving wave sources summed into a scalar
+  // field, contoured with marching squares each frame.
+  startField() {
+    const cv = this.heroCanvasRef.current;
+    if (!cv || (this.props.heroAnimation ?? true) === false) {
+      if (cv) cv.getContext('2d').clearRect(0, 0, cv.width, cv.height);
+      return;
+    }
+    const ctx = cv.getContext('2d');
+    const host = cv.parentElement;
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const accent = this.props.accent ?? 'oklch(0.82 0.17 152)';
+    const density = this.props.fieldDensity ?? 15;
+
+    let W = 0, H = 0, cols = 0, rows = 0, step = density;
+    const vals = [];
+    const resize = () => {
+      const r = host.getBoundingClientRect();
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      W = r.width; H = r.height;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      step = density;
+      cols = Math.ceil(W / step) + 1; rows = Math.ceil(H / step) + 1;
+    };
+    resize();
+    this._ro = new ResizeObserver(resize); this._ro.observe(host);
+
+    // pointer acts as a fourth, faster wave source
+    let px = 0.72, py = 0.3, tx = 0.72, ty = 0.3;
+    const onMove = (e) => {
+      const r = host.getBoundingClientRect();
+      tx = (e.clientX - r.left) / r.width; ty = (e.clientY - r.top) / r.height;
+    };
+    host.addEventListener('mousemove', onMove);
+    this._offMove = () => host.removeEventListener('mousemove', onMove);
+
+    const t0 = performance.now();
+    const draw = (now) => {
+      const t = still ? 4200 : (now - t0) / 1000;
+      px += (tx - px) * 0.045; py += (ty - py) * 0.045;
+
+      const src = [
+        [0.78 + 0.13 * Math.sin(t * 0.21), 0.26 + 0.15 * Math.cos(t * 0.17), 0.055, 1.35, 1.0],
+        [0.52 + 0.17 * Math.cos(t * 0.13), 0.72 + 0.12 * Math.sin(t * 0.19), 0.042, -1.1, 0.85],
+        [1.02 + 0.09 * Math.sin(t * 0.27), 0.86 + 0.10 * Math.cos(t * 0.23), 0.036, 0.9, 0.7],
+        [px, py, 0.062, 2.1, 0.9],
+      ];
+      const norm = Math.max(W, H);
+      for (let j = 0; j <= rows; j++) {
+        for (let i = 0; i <= cols; i++) {
+          const x = i * step, y = j * step;
+          let v = 0;
+          for (let s = 0; s < src.length; s++) {
+            const S = src[s];
+            const dx = (x - S[0] * W) / norm, dy = (y - S[1] * H) / norm;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            v += S[4] * Math.sin(d / S[2] - t * S[3]) / (1 + d * 5.2);
+          }
+          vals[j * (cols + 1) + i] = v;
+        }
+      }
+
+      ctx.clearRect(0, 0, W, H);
+      ctx.lineCap = 'round';
+      const levels = 11;
+      for (let l = 0; l < levels; l++) {
+        const lv = -0.62 + (1.24 * l) / (levels - 1);
+        const near = 1 - Math.min(1, Math.abs(lv) / 0.66);
+        ctx.beginPath();
+        for (let j = 0; j < rows; j++) {
+          for (let i = 0; i < cols; i++) {
+            const a = vals[j * (cols + 1) + i], b = vals[j * (cols + 1) + i + 1];
+            const c = vals[(j + 1) * (cols + 1) + i + 1], d = vals[(j + 1) * (cols + 1) + i];
+            let m = 0;
+            if (a > lv) m |= 8; if (b > lv) m |= 4; if (c > lv) m |= 2; if (d > lv) m |= 1;
+            if (m === 0 || m === 15) continue;
+            const x0 = i * step, y0 = j * step;
+            const ip = (p, q) => (lv - p) / (q - p || 1e-6);
+            const T = [x0 + step * ip(a, b), y0];
+            const R = [x0 + step, y0 + step * ip(b, c)];
+            const B = [x0 + step * ip(d, c), y0 + step];
+            const L = [x0, y0 + step * ip(a, d)];
+            const seg = (p, q) => { ctx.moveTo(p[0], p[1]); ctx.lineTo(q[0], q[1]); };
+            switch (m) {
+              case 1: case 14: seg(L, B); break;
+              case 2: case 13: seg(B, R); break;
+              case 3: case 12: seg(L, R); break;
+              case 4: case 11: seg(T, R); break;
+              case 6: case 9: seg(T, B); break;
+              case 7: case 8: seg(L, T); break;
+              case 5: seg(L, T); seg(B, R); break;
+              case 10: seg(L, B); seg(T, R); break;
+            }
+          }
+        }
+        ctx.strokeStyle = accent;
+        ctx.globalAlpha = 0.05 + 0.05 * near;
+        ctx.lineWidth = 3.5;
+        ctx.stroke();
+        ctx.globalAlpha = 0.16 + 0.4 * near;
+        ctx.lineWidth = near > 0.72 ? 1.15 : 0.7;
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+      if (!still) this._raf = requestAnimationFrame(draw);
+    };
+    this._raf = requestAnimationFrame(draw);
+  }
+
   renderVals() {
     return {
       accent: this.props.accent ?? 'oklch(0.82 0.17 152)',
       showAvailability: this.props.showAvailability ?? true,
       showMetrics: this.props.showMetrics ?? true,
+      heroCanvasRef: this.heroCanvasRef,
     };
   }
 }
