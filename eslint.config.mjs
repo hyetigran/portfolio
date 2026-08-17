@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "design mockups/**",
     "graft/**",
+    // vendored Draco decoder (three/examples build artifacts)
+    "public/draco/**",
   ]),
 ]);
 
